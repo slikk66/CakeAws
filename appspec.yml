@@ -1,0 +1,16 @@
+version: 0.0
+os: linux
+files:
+  - source: /config/cakephp.conf
+    destination: /etc/httpd/conf.d/cakephp.conf
+  - source: /cakephp-2.6.3
+    destination: /var/www/html/CakeAws
+hooks:
+  BeforeInstall:
+    - location: scripts/before_install
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - location: scripts/after_install
+      timeout: 300
+      runas: root
