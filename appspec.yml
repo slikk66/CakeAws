@@ -1,10 +1,10 @@
 version: 0.0
 os: linux
 files:
-  - source: /config/cakeaws.com.conf
+  - source: config/cakeaws.com.conf
     destination: /etc/httpd/conf.d/cakeaws.com.conf
-  - source: /cakephp-2.6.3
-    destination: /var/www/html/CakeAws/app/webroot
+  - source: cakephp-2.6.3
+    destination: /var/www/html/CakeAws
 hooks:
   BeforeInstall:
     - location: scripts/before-install.sh
