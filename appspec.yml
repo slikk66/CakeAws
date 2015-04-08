@@ -3,6 +3,8 @@ os: linux
 files:
   - source: config/cakeaws.com.conf
     destination: /etc/httpd/conf.d
+  - source: config/php.ini
+    destimation: /etc
   - source: cakephp-2.6.3
     destination: /var/www/html/CakeAws
 hooks:
